@@ -1,6 +1,6 @@
 {
   "name": "com.lelly.chat",
-  "version": "1.1.8",
+  "version": "1.1.9",
   "displayName": "Lelly API SDK",
   "description": "SDK oficial para integrar a inteligência artificial e CRM da Lelly.chat em jogos Unity. Inclui o Lelly AI Control Center para testes em tempo real.",
   "unity": "2019.4",

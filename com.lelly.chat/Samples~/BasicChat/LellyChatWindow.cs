@@ -18,7 +18,7 @@ namespace Lelly.Samples
         void Start()
         {
             lelly = GetComponent<LellyManager>();
-            if (lelly == null) lelly = FindObjectOfType<LellyManager>();
+            if (lelly == null) lelly = FindAnyObjectByType<LellyManager>();
             
             if (lelly == null || string.IsNullOrEmpty(lelly.apiKey))
             {

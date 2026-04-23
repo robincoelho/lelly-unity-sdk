@@ -18,8 +18,8 @@ namespace Lelly.SDK
         public string systemInstructions = "Você é um assistente prestativo dentro de um jogo Unity.";
         
         [Header("Eventos")]
-        public UnityEvent<string> onMessageReceived;
-        public UnityEvent<string> onError;
+        public UnityEvent<string> onMessageReceived = new UnityEvent<string>();
+        public UnityEvent<string> onError = new UnityEvent<string>();
 
         private string currentSessionId;
 

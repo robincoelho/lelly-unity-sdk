@@ -18,11 +18,12 @@ namespace Lelly.Samples
         void Start()
         {
             lelly = GetComponent<LellyManager>();
-            if (lelly == null) lelly = gameObject.AddComponent<LellyManager>();
-
-            if (string.IsNullOrEmpty(lelly.apiKey))
+            if (lelly == null) lelly = FindObjectOfType<LellyManager>();
+            
+            if (lelly == null || string.IsNullOrEmpty(lelly.apiKey))
             {
-                Debug.LogWarning("[Lelly] API Key não configurada! Por favor, configure sua chave no componente LellyManager para o chat funcionar.");
+                Debug.LogError("[Lelly] LellyManager não encontrado ou sem API Key! Por favor, arraste o componente LellyManager para a cena e configure sua chave.");
+                return;
             }
 
             CreateUI();
@@ -78,11 +79,11 @@ namespace Lelly.Samples
             Image img = bg.AddComponent<Image>();
             img.color = new Color(0.05f, 0.05f, 0.07f, 0.95f);
             RectTransform rt = bg.GetComponent<RectTransform>();
-            rt.anchorMin = new Vector2(1, 0);
-            rt.anchorMax = new Vector2(1, 0);
-            rt.pivot = new Vector2(1, 0);
+            rt.anchorMin = new Vector2(0.5f, 0);
+            rt.anchorMax = new Vector2(0.5f, 0);
+            rt.pivot = new Vector2(0.5f, 0);
             rt.sizeDelta = new Vector2(400, 600);
-            rt.anchoredPosition = new Vector2(-20, 20);
+            rt.anchoredPosition = new Vector2(0, 50);
 
             // Scroll View
             GameObject sv = new GameObject("ScrollView");
@@ -91,7 +92,7 @@ namespace Lelly.Samples
             rt = sv.GetComponent<RectTransform>();
             rt.anchorMin = Vector2.zero;
             rt.anchorMax = Vector2.one;
-            rt.sizeDelta = new Vector2(-20, -100);
+            rt.sizeDelta = new Vector2(-40, -120);
             rt.anchoredPosition = new Vector2(0, 40);
 
             // Viewport & Content

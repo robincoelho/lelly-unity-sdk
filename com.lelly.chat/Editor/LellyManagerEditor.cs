@@ -42,6 +42,7 @@ namespace Lelly.Editor
                 if (GUILayout.Button("Enviar Mensagem de Teste"))
                 {
                     testResult = "Aguardando resposta...";
+                    LellyAPI.Instance.Initialize(manager.apiKey);
                     manager.StartNewSession("Editor Tester", "editor@lelly.chat");
                     
                     // Delay a bit or just use the session ID once it's back. 
@@ -62,6 +63,7 @@ namespace Lelly.Editor
                 generatePrompt = EditorGUILayout.TextArea(generatePrompt, GUILayout.Height(60));
                 if (GUILayout.Button("Gerar Conteúdo"))
                 {
+                    LellyAPI.Instance.Initialize(manager.apiKey);
                     manager.QuickGenerate(generatePrompt, (res) => {
                         generateResult = res;
                         Repaint();

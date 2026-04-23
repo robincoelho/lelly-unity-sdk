@@ -1,0 +1,28 @@
+{
+  "name": "com.lelly.chat",
+  "version": "1.1.1",
+  "displayName": "Lelly API SDK",
+  "description": "SDK oficial para integrar a inteligência artificial e CRM da Lelly.chat em jogos Unity. Inclui o Lelly AI Control Center para testes em tempo real.",
+  "unity": "2019.4",
+  "author": {
+    "name": "Lelly.chat",
+    "url": "https://lelly.chat"
+  },
+  "changelogUrl": "https://lelly.chat/developers/docs#changelog",
+  "documentationUrl": "https://lelly.chat/developers/docs",
+  "licensesUrl": "https://lelly.chat/developers/docs#license",
+  "keywords": [
+    "ai",
+    "crm",
+    "chat",
+    "llm",
+    "lelly"
+  ],
+  "samples": [
+    {
+      "displayName": "Visual Chat Window",
+      "description": "Uma janela de chat completa que gera sua própria UI automaticamente para testes rápidos.",
+      "path": "Samples~/BasicChat"
+    }
+  ]
+}

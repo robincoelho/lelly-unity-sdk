@@ -1,0 +1,31 @@
+/[Aa]rtifacts/
+/[Bb]uild/
+/[Bb]uilds/
+/[Ll]og/
+/[Ll]ogs/
+/[Pp]ackages/
+/[Tt]emp/
+/[Oo]bj/
+/[Bb]in/
+
+# Unity generated
+*.csproj
+*.unityproj
+*.sln
+*.suo
+*.tmp
+*.user
+*.userprefs
+*.pidb
+*.booproj
+*.svntmp
+
+# OS generated
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Icon?
+ehthumbs.db
+Thumbs.db
